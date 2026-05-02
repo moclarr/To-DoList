@@ -16,6 +16,7 @@ function adicionarTarefa() {
     if(input == ''){
         alert('Conteúdo não pode ser vazio!')
         return;}
+    
     tarefas.push(input)
     localStorage.setItem("Tarefas", JSON.stringify(tarefas))
     renderizarTarefa(input)
