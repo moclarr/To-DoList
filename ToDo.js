@@ -12,6 +12,10 @@ if (dados) {
 
 function adicionarTarefa() {
     let input = document.querySelector("input").value;
+
+    if(input == ''){
+        alert('Adicione algo')
+        return; }
     tarefas.push(input)
     localStorage.setItem("Tarefas", JSON.stringify(tarefas))
     renderizarTarefa(input)
@@ -44,9 +48,6 @@ function deletarTarefa(checkbox, li, tarefas) {
     })
 }
 
-//Pegar as informações;
-//criar meu elemento li
-//adicionar ele a minha lista
 
 
 
@@ -75,36 +76,5 @@ function deletarTarefa(checkbox, li, tarefas) {
 
 
 
-// let opcao;
-// let nome;
-// let preco;
-// let quantidade;
-// let carrinho = []
 
-// function AddProduto() {
-//     nome = prompt("Nome do produto: ");
-//     preco = Number(prompt("Preço do produto: "));
-//     quantidade = Number(prompt("Quantidade: "));
 
-//     carrinho.push({
-//         nome: nome,
-//         preco: preco,
-//         quantidade: quantidade
-//     });
-// }
-
-// function ListarCarrinho() {
-//     console.log("Carrinho: ")
-
-//     for (let produto of carrinho) {
-//         console.log(`
-// Produto: ${produto.nome}
-// R$: ${produto.preco}
-// Qtd: ${produto.quantidade}
-//         `);
-
-//     }
-// }
-
-// AddProduto();
-// ListarCarrinho();
